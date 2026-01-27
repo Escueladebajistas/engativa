@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Entrevistas y material didáctico de la Escuela de Bajistas de Engativá. Aprende y disfruta contenido exclusivo de bajo eléctrico.">
+<title>Videos - Escuela de Bajistas Engativá</title>
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<style>
+body { font-family: 'Arial', sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
+header { background:#1a1a1a; color:#fff; padding:20px; text-align:center; }
+header h1 { margin:0; font-size:2rem; }
+.container { max-width:1200px; margin:20px auto; padding:0 15px; }
+h2 { text-align:center; margin-bottom:20px; color:#1a1a1a; }
+
+.tabs { display:flex; justify-content:center; margin-bottom:20px; gap:10px; flex-wrap:wrap; }
+.tab-btn { background:#fff; border:1px solid #ccc; padding:10px 20px; border-radius:5px; cursor:pointer; transition:0.2s; }
+.tab-btn.active, .tab-btn:hover { background:#0073e6; color:#fff; border-color:#0073e6; }
+
+#searchInput { display:block; margin:0 auto 20px auto; padding:10px; width:80%; max-width:400px; border:1px solid #ccc; border-radius:5px; }
+
+.videos-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; }
+.video-card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.2s ease; }
+.video-card:hover { transform:translateY(-5px); }
+.video-info { padding:15px; }
+.video-info h3 { margin:0 0 10px 0; font-size:1.1rem; color:#1a1a1a; }
+.video-info p { margin:0 0 10px 0; font-size:0.95rem; color:#555; }
+.video-info a { color:#0073e6; text-decoration:none; }
+.video-info a:hover { text-decoration:underline; }
+
+footer { text-align:center; padding:20px; background:#1a1a1a; color:#fff; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Escuela de Bajistas de Engativá</h1>
+  <p>Videos, entrevistas y material didáctico</p>
+</header>
+
+<div class="container">
+  <h2>Explora nuestros Videos</h2>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="Todas">Todas</button>
+    <button class="tab-btn" data-tab="Entrevistas">Entrevistas</button>
+    <button class="tab-btn" data-tab="Tutoriales">Tutoriales</button>
+  </div>
+
+  <input type="text" id="searchInput" placeholder="Buscar video por título...">
+
+  <div class="videos-grid" id="videosGrid"></div>
+</div>
+
+<footer>
+  &copy; 2026 Escuela de Bajistas de Engativá. Todos los derechos reservados.
+</footer>
+
+<script>
+// Cargar videos desde JSON
+let videosData = [];
+async function cargarVideos() {
+  try {
+    const response = await fetch('videos.json');
+    videosData = await response.json();
+    mostrarVideos('Todas');
+  } catch(e) {
+    console.error('Error cargando videos:', e);
+  }
+}
+
+// Mostrar videos filtrados
+function mostrarVideos(categoria = 'Todas', searchTerm = '') {
+  const container = document.getElementById('videosGrid');
+  container.innerHTML = '';
+  const filtered = videosData.filter(video => 
+    (categoria === 'Todas' || video.categoria === categoria) &&
+    video.titulo.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  filtered.forEach(video => {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+    card.innerHTML = `
+      <iframe src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.titulo}" loading="lazy" allowfullscreen></iframe>
+      <div class="video-info">
+        <h3>${video.titulo}</h3>
+        <p>${video.descripcion}</p>
+        <a href="https://www.youtube.com/watch?v=${video.youtubeId}" target="_blank">Ver en YouTube</a>
+      </div>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    mostrarVideos(btn.dataset.tab, document.getElementById('searchInput').value);
+  });
+});
+
+// Buscador
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
+  mostrarVideos(activeTab, e.target.value);
+});
+
+// Inicializar
+cargarVideos();
+</script>
+
+</body>
+</html>
