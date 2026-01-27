@@ -1,118 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Entrevistas y material didáctico de la Escuela de Bajistas de Engativá. Aprende y disfruta contenido exclusivo de bajo eléctrico.">
-<title>Videos - Escuela de Bajistas Engativá</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- ✅ Meta tag correcta para verificación de Google -->
+  <meta name="google-site-verification" content="7I55aZ3vdxYlCoNW49jKlC3Zy64aa755R-Xe" />
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-<style>
-body { font-family: 'Arial', sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
-header { background:#1a1a1a; color:#fff; padding:20px; text-align:center; }
-header h1 { margin:0; font-size:2rem; }
-.container { max-width:1200px; margin:20px auto; padding:0 15px; }
-h2 { text-align:center; margin-bottom:20px; color:#1a1a1a; }
-
-.tabs { display:flex; justify-content:center; margin-bottom:20px; gap:10px; flex-wrap:wrap; }
-.tab-btn { background:#fff; border:1px solid #ccc; padding:10px 20px; border-radius:5px; cursor:pointer; transition:0.2s; }
-.tab-btn.active, .tab-btn:hover { background:#0073e6; color:#fff; border-color:#0073e6; }
-
-#searchInput { display:block; margin:0 auto 20px auto; padding:10px; width:80%; max-width:400px; border:1px solid #ccc; border-radius:5px; }
-
-.videos-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; }
-.video-card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.2s ease; }
-.video-card:hover { transform:translateY(-5px); }
-.video-info { padding:15px; }
-.video-info h3 { margin:0 0 10px 0; font-size:1.1rem; color:#1a1a1a; }
-.video-info p { margin:0 0 10px 0; font-size:0.95rem; color:#555; }
-.video-info a { color:#0073e6; text-decoration:none; }
-.video-info a:hover { text-decoration:underline; }
-
-footer { text-align:center; padding:20px; background:#1a1a1a; color:#fff; margin-top:40px; }
-</style>
+  <title>Escuela de Bajistas de Engativá</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a23;
+      color: white;
+    }
+    header {
+      background-color: #0a0a23;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header img {
+      max-width: 200px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin: 20px 0 10px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-top: 40px;
+      color: #facc15;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+      padding: 10px 20px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #22c55e;
+      color: black;
+      padding: 15px 30px;
+      margin: 20px auto;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    section {
+      text-align: center;
+      padding: 30px 10px;
+    }
+    form {
+      background-color: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    footer {
+      background-color: #111827;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Escuela de Bajistas de Engativá</h1>
-  <p>Videos, entrevistas y material didáctico</p>
-</header>
+<style>
+  /* Estilo del menú */
+  .navbar {
+    background-color: #111;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
 
-<div class="container">
-  <h2>Explora nuestros Videos</h2>
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+  }
 
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="Todas">Todas</button>
-    <button class="tab-btn" data-tab="Entrevistas">Entrevistas</button>
-    <button class="tab-btn" data-tab="Tutoriales">Tutoriales</button>
+  .navbar a:hover {
+    background-color: #444;
+    border-radius: 5px;
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  @media (max-width: 600px) {
+    .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: flex;
+    }
+  }
+</style>
+
+<nav class="navbar">
+    <div><a href="index.html"><strong>Escuela de Bajistas</strong></a></div>
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-
-  <input type="text" id="searchInput" placeholder="Buscar video por título...">
-
-  <div class="videos-grid" id="videosGrid"></div>
-</div>
-
-<footer>
-  &copy; 2026 Escuela de Bajistas de Engativá. Todos los derechos reservados.
-</footer>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Inicio</a>
+    <a href="clases.html">Clases</a>
+    <a href="https://wa.me/573025125222" target="_blank">Contacto</a>
+  </div>
+</nav>
 
 <script>
-// Cargar videos desde JSON
-let videosData = [];
-async function cargarVideos() {
-  try {
-    const response = await fetch('videos.json');
-    videosData = await response.json();
-    mostrarVideos('Todas');
-  } catch(e) {
-    console.error('Error cargando videos:', e);
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
   }
-}
-
-// Mostrar videos filtrados
-function mostrarVideos(categoria = 'Todas', searchTerm = '') {
-  const container = document.getElementById('videosGrid');
-  container.innerHTML = '';
-  const filtered = videosData.filter(video => 
-    (categoria === 'Todas' || video.categoria === categoria) &&
-    video.titulo.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  filtered.forEach(video => {
-    const card = document.createElement('div');
-    card.className = 'video-card';
-    card.innerHTML = `
-      <iframe src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.titulo}" loading="lazy" allowfullscreen></iframe>
-      <div class="video-info">
-        <h3>${video.titulo}</h3>
-        <p>${video.descripcion}</p>
-        <a href="https://www.youtube.com/watch?v=${video.youtubeId}" target="_blank">Ver en YouTube</a>
-      </div>
-    `;
-    container.appendChild(card);
-  });
-}
-
-// Tabs
-document.querySelectorAll('.tab-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    mostrarVideos(btn.dataset.tab, document.getElementById('searchInput').value);
-  });
-});
-
-// Buscador
-document.getElementById('searchInput').addEventListener('input', (e) => {
-  const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
-  mostrarVideos(activeTab, e.target.value);
-});
-
-// Inicializar
-cargarVideos();
 </script>
+
+<header>
+  <img src="escuela-de-bajistas-.png" alt="Escuela de Bajistas Engativa"/>
+  <h1>Escuela de Bajistas de Engativá</h1>
+  <p>Aprende a tocar el bajo eléctrico desde cero o mejora tu nivel con clases personalizadas</p>
+  <a href="https://wa.me/573025125222" class="btn">Escríbenos a WhatsApp</a>
+</header>
+  
+<section>
+  <h2>¿A quién va dirigida esta escuela?</h2>
+  <p><strong>Nivel básico:</strong> Si no sabes nada de bajo, te enseñamos desde cero.</p>
+  <p><strong>Nivel intermedio:</strong> Mejora tu groove, técnica y conocimiento musical.</p>
+</section>
+
+<section>
+  <h2>¿Qué aprenderás?</h2>
+  <p>✅ Técnica de dedos y postura<br>
+     ✅ Gramatica Musical<br>
+     ✅ Leer partituras<br>
+     ✅ Lectura rítmica y cifrado americano<br>
+     ✅ Escalas, acordes, funciones armónicas<br>
+     ✅ Estilos: rock, funk, pop, reggae<br>
+     ✅ Canciones reales y ejercicios prácticos</p>
+</section>
+
+<section>
+  <h2>Beneficios</h2>
+  <p>🎧 Clases 100% prácticas<br>
+     📍 En Engativá, Bogotá<br>
+     💥 Método dinámico y musical<br>
+     📹 También clases virtuales<br>
+     🎓 Formación musical completa</p>
+</section>
+
+<section>
+  <h2>Contáctanos</h2>
+  <a href="https://wa.me/573025125222" class="btn">Escríbenos a WhatsApp</a>
+  
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+    <iframe 
+      src="https://www.youtube-nocookie.com/embed/keDytXX0mKc?rel=0&modestbranding=1&showinfo=0"
+      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+    </iframe>
+  </div>
+</section>
+
+<section>
+  <img src="clases-de-bajo-electrico.png" alt="clases de bajo electrico" width="320" height="320">
+</section>
+
+<footer style="text-align:center; padding:20px;"> 
+  <p>Escríbenos a: escueladebajistasengativa@gmail.com | Síguenos en Instagram</p> 
+  <a href="https://instagram.com/escueladebajistasengativa" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:30px; height:30px;">
+  </a>
+</footer>
+        
+<footer>
+  <p>&copy; 2025 Escuela de Bajistas de Engativá - Bogotá, Colombia</p>
+</footer>
+
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/573025125222" 
+   class="whatsapp-float" 
+   target="_blank" 
+   title="Escríbenos por WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
+       alt="WhatsApp" 
+       width="50" 
+       height="50" />
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #25D366;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-float img {
+    display: block;
+  }
+</style>
 
 </body>
 </html>
+
+
+
+
