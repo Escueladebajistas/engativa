@@ -1,60 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <header>
-  <h1>Escuela de Bajistas de Engativá</h1>
-  <p>Videos, entrevistas y material didáctico</p>
-  </header>
-<nav class="navbar">
-    <div><a href="index.html"><strong>Escuela de Bajistas</strong></a></div>
-  <div class="menu-toggle" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Inicio</a>
-    <a href="clases.html">Clases</a>
-    <a href="videos.html">Videos</a>
-    <a href="https://wa.me/573025125222" target="_blank">Contacto</a>
-  </div>
-</nav>
-</nav>
-<div class="container">
-  <h2>Explora nuestros Videos</h2>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Entrevistas y material didáctico de la Escuela de Bajistas de Engativá. Aprende y disfruta contenido exclusivo de bajo eléctrico.">
-<title>Videos - Escuela de Bajistas Engativá</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Entrevistas y material didáctico de la Escuela de Bajistas de Engativá. Videos educativos y contenido exclusivo sobre bajo eléctrico.">
+  <title>Videos | Escuela de Bajistas de Engativá</title>
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico">
 
-<style>
-body { font-family: 'Arial', sans-serif; margin:0; padding:0; background:#f9f9f9; color:#333; }
-header { background:#1a1a1a; color:#fff; padding:20px; text-align:center; }
-header h1 { margin:0; font-size:2rem; }
-.container { max-width:1200px; margin:20px auto; padding:0 15px; }
-h2 { text-align:center; margin-bottom:20px; color:#1a1a1a; }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
 
-.tabs { display:flex; justify-content:center; margin-bottom:20px; gap:10px; flex-wrap:wrap; }
-.tab-btn { background:#fff; border:1px solid #ccc; padding:10px 20px; border-radius:5px; cursor:pointer; transition:0.2s; }
-.tab-btn.active, .tab-btn:hover { background:#0073e6; color:#fff; border-color:#0073e6; }
+    /* ===== MENU ===== */
+    header {
+      background: #111;
+      padding: 15px 0;
+    }
 
-#searchInput { display:block; margin:0 auto 20px auto; padding:10px; width:80%; max-width:400px; border:1px solid #ccc; border-radius:5px; }
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
 
-.videos-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:20px; }
-.video-card { background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 4px 10px rgba(0,0,0,0.1); transition:transform 0.2s ease; }
-.video-card:hover { transform:translateY(-5px); }
-.video-info { padding:15px; }
-.video-info h3 { margin:0 0 10px 0; font-size:1.1rem; color:#1a1a1a; }
-.video-info p { margin:0 0 10px 0; font-size:0.95rem; color:#555; }
-.video-info a { color:#0073e6; text-decoration:none; }
-.video-info a:hover { text-decoration:underline; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
 
-footer { text-align:center; padding:20px; background:#1a1a1a; color:#fff; margin-top:40px; }
-</style>
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== CONTENIDO ===== */
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    /* ===== TABS ===== */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .tab-btn {
+      padding: 10px 18px;
+      border: 1px solid #ccc;
+      background: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+
+    .tab-btn.active,
+    .tab-btn:hover {
+      background: #0073e6;
+      color: #fff;
+      border-color: #0073e6;
+    }
+
+    /* ===== BUSCADOR ===== */
+    #searchInput {
+      display: block;
+      margin: 0 auto 30px;
+      padding: 10px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    /* ===== VIDEOS ===== */
+    .videos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .video-info {
+      padding: 15px;
+    }
+
+    .video-info h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+
+    .video-info p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .video-info a {
+      color: #0073e6;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .video-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
+
 <body>
+
+<!-- ===== MENU (igual en todas las páginas) ===== -->
+<header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="videos.html">Videos</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="convocatorias.html">Convocatorias</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+<!-- ===== CONTENIDO ===== -->
+<div class="container">
+  <h1>Videos y Entrevistas</h1>
+  <p class="subtitle">Material educativo, entrevistas y contenido exclusivo de bajo eléctrico</p>
 
   <div class="tabs">
     <button class="tab-btn active" data-tab="Todas">Todas</button>
@@ -67,45 +187,50 @@ footer { text-align:center; padding:20px; background:#1a1a1a; color:#fff; margin
   <div class="videos-grid" id="videosGrid"></div>
 </div>
 
+<!-- ===== FOOTER ===== -->
 <footer>
-  &copy; 2026 Escuela de Bajistas de Engativá. Todos los derechos reservados.
+  © 2026 Escuela de Bajistas de Engativá · Contenido educativo
 </footer>
 
 <script>
-// Cargar videos desde JSON
 let videosData = [];
+
+// Cargar JSON
 async function cargarVideos() {
-  try {
-    const response = await fetch('videos.json');
-    videosData = await response.json();
-    mostrarVideos('Todas');
-  } catch(e) {
-    console.error('Error cargando videos:', e);
-  }
+  const response = await fetch('videos.json');
+  videosData = await response.json();
+  mostrarVideos('Todas');
 }
 
-// Mostrar videos filtrados
-function mostrarVideos(categoria = 'Todas', searchTerm = '') {
-  const container = document.getElementById('videosGrid');
-  container.innerHTML = '';
-  const filtered = videosData.filter(video => 
-    (categoria === 'Todas' || video.categoria === categoria) &&
-    video.titulo.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+// Mostrar videos
+function mostrarVideos(categoria, busqueda = '') {
+  const grid = document.getElementById('videosGrid');
+  grid.innerHTML = '';
 
-  filtered.forEach(video => {
-    const card = document.createElement('div');
-    card.className = 'video-card';
-    card.innerHTML = `
-      <iframe src="https://www.youtube.com/embed/${video.youtubeId}" title="${video.titulo}" loading="lazy" allowfullscreen></iframe>
-      <div class="video-info">
-        <h3>${video.titulo}</h3>
-        <p>${video.descripcion}</p>
-        <a href="https://www.youtube.com/watch?v=${video.youtubeId}" target="_blank">Ver en YouTube</a>
-      </div>
-    `;
-    container.appendChild(card);
-  });
+  videosData
+    .filter(v =>
+      (categoria === 'Todas' || v.categoria === categoria) &&
+      v.titulo.toLowerCase().includes(busqueda.toLowerCase())
+    )
+    .forEach(video => {
+      const card = document.createElement('div');
+      card.className = 'video-card';
+      card.innerHTML = `
+        <iframe 
+          src="https://www.youtube.com/embed/${video.youtubeId}" 
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+        <div class="video-info">
+          <h3>${video.titulo}</h3>
+          <p>${video.descripcion}</p>
+          <a href="https://www.youtube.com/watch?v=${video.youtubeId}" target="_blank">
+            Ver en YouTube
+          </a>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
 }
 
 // Tabs
@@ -118,12 +243,11 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 });
 
 // Buscador
-document.getElementById('searchInput').addEventListener('input', (e) => {
+document.getElementById('searchInput').addEventListener('input', e => {
   const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
   mostrarVideos(activeTab, e.target.value);
 });
 
-// Inicializar
 cargarVideos();
 </script>
 
