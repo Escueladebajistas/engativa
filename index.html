@@ -134,6 +134,55 @@
       display: flex;
     }
   }
+  /* ===== REDES SOCIALES PRO ===== */
+#social-feed {
+  background: linear-gradient(180deg, #0a0a0a, #111);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+#social-feed .title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+#social-feed .subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.feed-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  transition: transform 0.4s ease;
+}
+
+.feed-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.feed-frame {
+  width: 100%;
+  height: 600px;
+  border: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .feed-frame {
+    height: 500px;
+  }
+
+  #social-feed .title {
+    font-size: 2rem;
+  }
+}
 </style>
 
 <nav class="navbar">
