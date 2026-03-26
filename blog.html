@@ -1,28 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
-  <script src="https://elfsightcdn.com/platform.js" async></script>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <meta name="google-site-verification" content="7I55aZ3vdxYlCoNW49jKlC3Zy64aa755R-Xe" />
-
-  <title>Escuela de Bajistas de Engativá</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reto 30 Días Bajo</title>
 
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0a23;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #000, #111);
       color: white;
+      text-align: center;
     }
 
-    /* 🔥 NAVBAR PRO */
+    /* 🔥 NAVBAR */
     .navbar {
       position: fixed;
       top: 0;
@@ -47,7 +39,7 @@
     }
 
     .active {
-      color: #facc15;
+      color: #f2a900;
     }
 
     .menu-toggle {
@@ -84,71 +76,82 @@
       }
     }
 
-    /* ESPACIO PARA NAVBAR */
-    header {
-      margin-top: 80px;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    header img {
-      max-width: 200px;
+    /* CONTENIDO */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 100px 20px 40px;
     }
 
     h1 {
-      font-size: 2.2rem;
-      margin: 20px 0 10px;
+      color: #f2a900;
+      font-size: 32px;
     }
 
     h2 {
-      font-size: 1.5rem;
-      margin-top: 40px;
-      color: #facc15;
-      text-align: center;
+      color: #f2a900;
+      margin-top: 30px;
     }
 
     p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: auto;
+      font-size: 18px;
       line-height: 1.6;
-      padding: 10px 20px;
     }
 
-    .btn {
+    .card {
+      background: #1a1a1a;
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(255,170,0,0.2);
+    }
+
+    ul {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .precio {
+      font-size: 26px;
+      color: #00ff88;
+      font-weight: bold;
+      margin: 20px 0;
+    }
+
+    .boton {
       display: inline-block;
-      background-color: #22c55e;
-      color: black;
-      padding: 15px 30px;
-      margin: 20px auto;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: #25D366;
+      color: white;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 10px;
       font-weight: bold;
     }
 
-    section {
-      text-align: center;
-      padding: 30px 10px;
+    .urgencia {
+      color: #ff4d4d;
+      margin-top: 10px;
+      font-weight: bold;
     }
 
-    footer {
-      background-color: #111827;
-      padding: 20px;
-      text-align: center;
-      color: #aaa;
-    }
-
-    /* 📲 WHATSAPP */
-    .whatsapp-float {
+    /* WHATSAPP */
+    .whatsapp {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      z-index: 999;
-      background-color: #25D366;
+      background: #25D366;
+      padding: 15px;
       border-radius: 50%;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      text-decoration: none;
+      color: white;
+      font-size: 20px;
     }
+
   </style>
 </head>
 
@@ -165,54 +168,67 @@
   </div>
 
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="active">Inicio</a>
+    <a href="index.html">Inicio</a>
     <a href="clases.html">Clases</a>
-    <a href="blog.html">Blog</a>
+    <a href="blog.html" class="active">Blog</a>
     <a href="videos.html">Videos</a>
     <a href="https://wa.me/573025125222" target="_blank">Contacto</a>
   </div>
 </nav>
 
-<!-- HEADER -->
-<header>
-  <img src="escuela-de-bajistas-.png" alt="Escuela de Bajistas Engativa"/>
-  <h1>Escuela de Bajistas de Engativá</h1>
-  <p>Aprende a tocar el bajo eléctrico desde cero o mejora tu nivel</p>
-  <a href="https://wa.me/573025125222" class="btn">Escríbenos a WhatsApp</a>
-</header>
+<!-- CONTENIDO -->
+<div class="container">
 
-<section>
-  <h2>¿A quién va dirigida esta escuela?</h2>
-  <p><strong>Nivel básico:</strong> Desde cero</p>
-  <p><strong>Nivel intermedio:</strong> Mejora técnica y groove</p>
-</section>
+  <div class="card">
+    <h1>¿Sabías que cualquiera puede aprender a tocar el bajo y sonar increíble? 🤫</h1>
 
-<section>
-  <h2>¿Qué aprenderás?</h2>
-  <p>✅ Técnica<br>✅ Ritmo<br>✅ Escalas<br>✅ Canciones reales</p>
-</section>
+    <p>Hemos creado un espacio único para aprender bajo eléctrico desde cero y disfrutar la música.</p>
 
-<section>
-  <h2>Contáctanos</h2>
-  <a href="https://wa.me/573025125222" class="btn">WhatsApp</a>
-</section>
+    <p>Sí… todos los grandes bajistas empezaron desde cero. ¡Hoy puede ser tu día! 🎸</p>
 
-<!-- REDES -->
-<section style="padding:60px 20px;">
-  <h2>🎸 Comunidad</h2>
-  <div class="elfsight-app-53e73e81-7528-4574-bebc-99d887f8c279"></div>
-</section>
+    <h2>🔥 RETO 30 DÍAS: TU PRIMERA CANCIÓN EN EL BAJO</h2>
 
-<footer>
-  <p>&copy; 2025 Escuela de Bajistas de Engativá</p>
-</footer>
+    <p>En solo un mes podrás:</p>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/573025125222" class="whatsapp-float" target="_blank">
+    <ul>
+      <li>✅ Aprender las bases del bajo</li>
+      <li>✅ Tocar tu primera canción</li>
+      <li>✅ Ganar confianza y ritmo</li>
+    </ul>
+
+    <h2>Incluye:</h2>
+
+    <ul>
+      <li>• 1 clase semanal (presencial o virtual)</li>
+      <li>• Ejercicios prácticos y progresivos</li>
+      <li>• Acompañamiento constante</li>
+    </ul>
+
+    <p class="precio">💰 $200.000 COP (precio especial)</p>
+
+    <p class="urgencia">⏱️ Aún estás a tiempo</p>
+
+    <a href="https://wa.me/573025125222" target="_blank" class="boton">
+      📲 QUIERO MI CUPO
+    </a>
+
+    <p style="margin-top:15px;">🎬 Escribe BAJO o envía DM y te damos toda la info</p>
+
+    <p style="margin-top:20px;">¡Te esperamos! 🎸</p>
+
+    <p style="margin-top:20px; color:#aaa;">
+      #EscuelaDeBajistas #AprenderBajo #BajoEléctrico #ClasesDeBajo #MúsicaEnBogotá #reto30días
+    </p>
+
+  </div>
+
+</div>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/573025125222" class="whatsapp" target="_blank">
   💬
 </a>
 
-<!-- SCRIPT -->
 <script>
 function toggleMenu() {
   document.getElementById('navLinks').classList.toggle('active');
