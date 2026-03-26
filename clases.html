@@ -1,178 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <meta name="google-site-verification" content="google-site-verification: google46085075e87af533.html"/>
-  ...
-</head>
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clases de Bajo</title>
 
-  <title>Clases de Bajo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      max-width: 700px;
-      margin: auto;
-      background-color:#fdfdfd;
-      color: #222;
-    }
-    h1 {
-      color: #2c3e50;
-    }
-    .horarios {
-      margin: 20px 0;
-    }
-    .info, .ubicacion, .cta {
-      margin-bottom: 20px;
-    }
-    .cta {
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #000, #111);
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
 
-  <style>
-  /* Estilo del menú */
-  .navbar {
-    background-color: #222;
-    overflow: hidden;
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  z-index: 1000;
+}
+
+.logo a {
+  color: #f2a900;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  margin: 5px 8px;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #f2a900;
+}
+
+.active {
+  color: #f2a900;
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background: white;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    width: 200px;
+  }
+
+  .nav-links.active {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    flex-wrap: wrap;
-  }
-
-  .navbar a {
-    color: #f2eceb;
-    text-decoration: none;
-    padding: 10px 15px;
-    display: block;
-  }
-
-  .navbar a:hover {
-    background-color: #444;
-    border-radius: 5px;
   }
 
   .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-
-  .menu-toggle span {
-    background: white;
-    height: 3px;
-    width: 25px;
-    margin: 4px 0;
-  }
-
-  .nav-links {
     display: flex;
   }
+}
 
-  @media (max-width: 600px) {
-    .nav-links {
-      display: none;
-      width: 100%;
-      flex-direction: column;
-    }
+/* CONTENIDO */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px 40px;
+}
 
-    .nav-links.active {
-      display: flex;
-    }
+.card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255,170,0,0.2);
+}
 
-    .menu-toggle {
-      display: flex;
-    }
-  }
+h1, h2 {
+  color: #f2a900;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* BOTÓN */
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* LINK VOLVER */
+.volver {
+  display: inline-block;
+  margin-top: 20px;
+  color: #aaa;
+  text-decoration: none;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+}
 </style>
+</head>
 
-<nav class="navbar">
-  <div><a href="index.html"><strong>Escuela de Bajistas</strong></a></div>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">
+    <a href="index.html">Escuela de Bajistas</a>
+  </div>
+
   <div class="menu-toggle" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
   </div>
+
   <div class="nav-links" id="navLinks">
     <a href="index.html">Inicio</a>
-    <a href="clases.html">Clases</a>
+    <a href="clases.html" class="active">Clases</a>
+    <a href="blog.html">Blog</a>
     <a href="videos.html">Videos</a>
     <a href="https://wa.me/573025125222" target="_blank">Contacto</a>
   </div>
-</nav>
+</div>
 
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('navLinks');
-    nav.classList.toggle('active');
-  }
-</script>
+<!-- CONTENIDO -->
+<div class="container">
 
-  <h1>Clases de Bajo - Escuela de Bajistas Engativá</h1>
-  
-  <div class="info">
-    <p>La Escuela de Bajistas maneja nivel <strong>básico</strong> e <strong>intermedio</strong>, con clases <strong>teórico-prácticas</strong>.</p>
-    <p>🎶 Mensualmente se realizan cuatro clases: de 75 minutos ( una hora y 15 minutos) cada una.</p>
+  <div class="card">
+    <h1>Clases de Bajo - Escuela de Bajistas Engativá</h1>
+    <p>La Escuela de Bajistas maneja nivel básico e intermedio, con clases teórico-prácticas.</p>
   </div>
 
-  <div class="horarios">
+  <div class="card">
+    <h2>🎶 Modalidad</h2>
+    <p>Mensualmente se realizan cuatro clases de 75 minutos (1 hora y 15 minutos) cada una.</p>
     <p>Horarios flexibles</p>
-    <ul>
-      <li>✅ Elige el horario segun tu disponibilidad.</li>
-      </ul>
+    <p>✅ Elige el horario según tu disponibilidad.</p>
   </div>
 
-  <div class="info">
-    <p>💰 <strong>Costo mensual:</strong> $200.000 COP</p>
+  <div class="card">
+    <h2>💰 Inversión</h2>
+    <p style="font-size:24px; color:#00ff88;"><strong>$200.000 COP</strong></p>
   </div>
 
-  <div class="ubicacion">
-    <p>🏡 Estamos ubicados en la localidad de Engativá, calle 71A #90B-43.</p>
+  <div class="card">
+    <h2>📍 Ubicación</h2>
+    <p>Estamos ubicados en la localidad de Engativá</p>
+    <p>📌 Calle 71A #90B-43</p>
   </div>
 
-  <div class="cta">
-    <p>👉 Si te interesa o tienes alguna duda, ¡quedo atento!</p>
-    <p><a href="https://wa.me/573025125222" target="_blank">📲 Escríbeme por WhatsApp</a></p>
+  <div class="card">
+    <h2>📲 Contacto</h2>
+    <p>Si te interesa o tienes alguna duda, ¡quedo atento!</p>
+
+    <a href="https://wa.me/573025125222" target="_blank" class="boton">
+      Escríbeme por WhatsApp
+    </a>
+
+    <br>
+
+    <a href="index.html" class="volver">
+      ⬅ Volver a la página principal
+    </a>
   </div>
 
-  <p><a href="index.html">⬅ Volver a la página principal</a></p>
-  <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/573025125222" 
-   class="whatsapp-float" 
-   target="_blank" 
-   title="Escríbenos por WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-       alt="WhatsApp" 
-       width="50" 
-       height="50" />
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/573025125222" class="whatsapp" target="_blank">
+  💬
 </a>
 
-<style>
-  .whatsapp-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 999;
-    background-color: #25D366;
-    border-radius: 50%;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: transform 0.3s;
-  }
-
-  .whatsapp-float:hover {
-    transform: scale(1.1);
-  }
-
-  .whatsapp-float img {
-    display: block;
-  }
-</style>
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
