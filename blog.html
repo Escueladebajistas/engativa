@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reto 30 Días Bajo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reto 30 Días Bajo</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #000, #111);
-      color: white;
-      text-align: center;
-    }
+<style>
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #000, #111);
+  color: white;
+  text-align: center;
+  overflow-x: hidden; /* 🔥 evita desbordes */
+}
 
-    /* 🔥 NAVBAR */
-   .navbar {
+/* 🔥 NAVBAR CORREGIDO */
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -29,7 +31,7 @@
 }
 
 /* LOGO */
-.navbar > div:first-child a {
+.logo a {
   color: #f2a900;
   font-weight: bold;
   text-decoration: none;
@@ -40,12 +42,11 @@
 /* LINKS */
 .nav-links {
   display: flex;
-  flex-wrap: wrap; /* 🔥 clave */
+  flex-wrap: wrap;
   justify-content: flex-end;
   max-width: 100%;
 }
 
-/* LINKS INDIVIDUALES */
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -53,12 +54,10 @@
   font-size: 14px;
 }
 
-/* HOVER */
 .nav-links a:hover {
   color: #f2a900;
 }
 
-/* ACTIVO */
 .active {
   color: #f2a900;
 }
@@ -97,120 +96,99 @@
 
   .menu-toggle {
     display: flex;
-    }
+  }
+}
 
-    .menu-toggle span {
-      background: white;
-      height: 3px;
-      width: 25px;
-      margin: 4px 0;
-    }
+/* CONTENIDO */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px 40px;
+}
 
-    .nav-links {
-      display: flex;
-    }
+h1 {
+  color: #f2a900;
+  font-size: 30px;
+}
 
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        background: black;
-      }
+h2 {
+  color: #f2a900;
+  margin-top: 30px;
+}
 
-      .nav-links.active {
-        display: flex;
-      }
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
 
-      .menu-toggle {
-        display: flex;
-      }
-    }
+.card {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(255,170,0,0.2);
+}
 
-    /* CONTENIDO */
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 100px 20px 40px;
-    }
+ul {
+  text-align: left;
+  margin-top: 20px;
+}
 
-    h1 {
-      color: #f2a900;
-      font-size: 32px;
-    }
+li {
+  margin-bottom: 10px;
+}
 
-    h2 {
-      color: #f2a900;
-      margin-top: 30px;
-    }
+/* PRECIO */
+.precio {
+  font-size: 26px;
+  color: #00ff88;
+  font-weight: bold;
+  margin: 20px 0;
+}
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
+/* BOTÓN */
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
 
-    .card {
-      background: #1a1a1a;
-      padding: 25px;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 0 20px rgba(255,170,0,0.2);
-    }
+/* URGENCIA */
+.urgencia {
+  color: #ff4d4d;
+  margin-top: 10px;
+  font-weight: bold;
+}
 
-    ul {
-      text-align: left;
-      margin-top: 20px;
-    }
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
 
-    li {
-      margin-bottom: 10px;
-    }
-
-    .precio {
-      font-size: 26px;
-      color: #00ff88;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-
-    .boton {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-    }
-
-    .urgencia {
-      color: #ff4d4d;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      padding: 15px;
-      border-radius: 50%;
-      text-decoration: none;
-      color: white;
-      font-size: 20px;
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
-<!-- 🔥 MENÚ -->
-<nav class="navbar">
-  <div><a href="index.html"><strong>Escuela de Bajistas Engativá</strong></a></div>
+<!-- 🔥 NAVBAR -->
+<div class="navbar">
+
+  <div class="logo">
+    <a href="index.html">Escuela de Bajistas</a>
+  </div>
 
   <div class="menu-toggle" onclick="toggleMenu()">
     <span></span>
@@ -225,12 +203,14 @@
     <a href="videos.html">Videos</a>
     <a href="https://wa.me/573025125222" target="_blank">Contacto</a>
   </div>
-</nav>
+
+</div>
 
 <!-- CONTENIDO -->
 <div class="container">
 
   <div class="card">
+
     <h1>¿Sabías que cualquiera puede aprender a tocar el bajo y sonar increíble? 🤫</h1>
 
     <p>Hemos creado un espacio único para aprender bajo eléctrico desde cero y disfrutar la música.</p>
@@ -255,7 +235,7 @@
       <li>• Acompañamiento constante</li>
     </ul>
 
-    <p class="precio">💰 $200.000 COP (precio especial)</p>
+    <p class="precio">💰 $200.000 COP</p>
 
     <p class="urgencia">⏱️ Aún estás a tiempo</p>
 
@@ -263,26 +243,27 @@
       📲 QUIERO MI CUPO
     </a>
 
-    <p style="margin-top:15px;">🎬 Escribe BAJO o envía DM y te damos toda la info</p>
+    <p style="margin-top:15px;">🎬 Escribe BAJO o envía DM</p>
 
     <p style="margin-top:20px;">¡Te esperamos! 🎸</p>
 
     <p style="margin-top:20px; color:#aaa;">
-      EscuelaDeBajistas AprenderBajo BajoEléctrico ClasesDeBajo MúsicaEnBogotá reto30días
+      ClasesDeBajoelectrico MúsicaEnBogotá reto30días
     </p>
 
   </div>
 
 </div>
 
-<!-- BOTÓN WHATSAPP -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/573025125222" class="whatsapp" target="_blank">
   💬
 </a>
 
+<!-- SCRIPT -->
 <script>
 function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('active');
+  document.getElementById("navLinks").classList.toggle("active");
 }
 </script>
 
