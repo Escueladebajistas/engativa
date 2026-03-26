@@ -15,37 +15,88 @@
     }
 
     /* 🔥 NAVBAR */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #111;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      z-index: 1000;
-    }
+   .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
 
-    .navbar a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-    }
+/* LOGO */
+.navbar > div:first-child a {
+  color: #f2a900;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  white-space: nowrap;
+}
 
-    .navbar a:hover {
-      background-color: #444;
-      border-radius: 5px;
-    }
+/* LINKS */
+.nav-links {
+  display: flex;
+  flex-wrap: wrap; /* 🔥 clave */
+  justify-content: flex-end;
+  max-width: 100%;
+}
 
-    .active {
-      color: #f2a900;
-    }
+/* LINKS INDIVIDUALES */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 5px 8px;
+  font-size: 14px;
+}
 
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
+/* HOVER */
+.nav-links a:hover {
+  color: #f2a900;
+}
+
+/* ACTIVO */
+.active {
+  color: #f2a900;
+}
+
+/* BOTÓN MÓVIL */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    background: #000;
+    flex-direction: column;
+    display: none;
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
     }
 
     .menu-toggle span {
