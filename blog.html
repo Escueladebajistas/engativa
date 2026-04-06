@@ -6,6 +6,91 @@
 <title>Reto 30 Días Bajo</title>
 
 <style>
+/* EVENTO PRO NETFLIX */
+.evento-pro {
+  padding: 50px 20px;
+  background: #0b0b0b;
+}
+
+/* VIDEO */
+.evento-video {
+  max-width: 900px;
+  margin: auto;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.evento-video video {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* CARD */
+.evento-card {
+  max-width: 900px;
+  margin: auto;
+  background: #141414;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: left;
+  transition: 0.4s;
+}
+
+.evento-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+}
+
+/* TITULO */
+.evento-card h2 {
+  color: #f2a900;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+/* TEXTO */
+.evento-card p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* INFO */
+.evento-info {
+  margin-top: 20px;
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* BOTÓN */
+.evento-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 25px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.evento-btn:hover {
+  transform: scale(1.05);
+}
+
+/* RESERVA */
+.evento-reserva {
+  margin-top: 20px;
+}
+
+/* APOYO */
+.evento-apoyo {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #aaa;
+}
 /* RESET */
 body {
   margin: 0;
@@ -254,6 +339,57 @@ li {
   </div>
 
 </div>
+</div>
+
+<!-- 🎬 EVENTO PRO -->
+<section class="evento-pro">
+
+  <!-- 🎥 VIDEO SUPERIOR -->
+  <div class="evento-video">
+    <video controls>
+      <source src="bambuco colombiano en bajo electrico.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+  </div>
+
+  <!-- 🎸 CONTENIDO -->
+  <div class="evento-card">
+
+    <h2>🎸 El Bajo como Protagonista</h2>
+
+    <p>
+      La Escuela de Bajistas de Engativá te invita a una experiencia musical única:
+      <strong>"El Bajo como Protagonista"</strong>.
+    </p>
+
+    <p>
+      Ven a conocer el resultado del <strong>Laboratorio Creativo de Canciones</strong>,
+      donde músicos, cantantes y estudiantes se unen para estrenar
+      <strong>10 composiciones originales</strong>.
+    </p>
+
+    <div class="evento-info">
+      <p>🗓️ <strong>Sábado 11 de abril</strong></p>
+      <p>⏰ <strong>2:00 PM</strong></p>
+      <p>📍 Teatro Casa de Artistas<br>Calle 71a #90b - 43</p>
+    </div>
+
+    <div class="evento-reserva">
+      <p>🎟️ <strong>Entrada con reserva previa</strong></p>
+
+      <a href="https://wa.me/573025125222" target="_blank" class="evento-btn">
+        📲 RESERVAR POR WHATSAPP
+      </a>
+    </div>
+
+    <p class="evento-apoyo">
+      Proyecto apoyado por el programa <strong>Más Cultura Local</strong>,
+      en alianza con entidades culturales de Bogotá.
+    </p>
+
+  </div>
+
+</section>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/573025125222" class="whatsapp" target="_blank">
