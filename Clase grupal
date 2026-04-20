@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clases Grupales Bajo Eléctrico</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0b0b0b;
+  color: white;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* HERO */
+h1 {
+  font-size: 38px;
+}
+
+.sub {
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+/* PRECIO */
+.price-card {
+  background: #111;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 30px rgba(0,255,136,0.15);
+}
+
+.price {
+  font-size: 55px;
+  color: #00ff88;
+  font-weight: bold;
+}
+
+/* TARJETAS */
+.card {
+  background: #111;
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* FORM */
+.form-container {
+  margin-top: 40px;
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+iframe {
+  width: 100%;
+  height: 800px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* TEXTO */
+ul {
+  line-height: 1.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>🎸 Clases Grupales de Bajo Eléctrico</h1>
+  <p class="sub">Empieza a tocar en grupo y lleva tu nivel al siguiente paso</p>
+
+  <!-- PRECIO -->
+  <div class="price-card">
+    <div class="price">$130.000</div>
+    <p>COP / mensual</p>
+
+    <p>
+      4 clases al mes (1 semanal)<br>
+      📅 Sábados · ⏰ 3:30 pm – 5:00 pm
+    </p>
+
+    <p>
+      📍 Calle 71a #90b 43<br>
+      Escuela de Bajistas de Engativá
+    </p>
+
+    <p style="color:#f2a900;">⚠️ Cupos limitados</p>
+  </div>
+
+  <!-- BENEFICIOS -->
+  <div class="card">
+    <h2>🔥 ¿Qué lograrás?</h2>
+    <ul>
+      <li>Tocar canciones completas en grupo</li>
+      <li>Mejorar tu groove y ritmo</li>
+      <li>Entender la música fácilmente</li>
+      <li>Crear tus propias líneas de bajo</li>
+      <li>Participar en muestra musical</li>
+    </ul>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="card">
+    <h2>📚 ¿Qué incluye?</h2>
+    <ul>
+      <li>Ensamble musical</li>
+      <li>Análisis de canciones</li>
+      <li>Técnica aplicada</li>
+      <li>Improvisación</li>
+      <li>Composición colectiva</li>
+    </ul>
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="form-container">
+    <h2>📝 Inscríbete aquí</h2>
+
+    <!-- PEGA TU GOOGLE FORM AQUÍ -->
+    <iframe src="https://forms.gle/iAQKDSMjh8e4vbNQA"></iframe>
+
+  </div>
+
+</div>
+
+</body>
+</html>
