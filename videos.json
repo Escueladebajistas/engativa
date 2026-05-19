@@ -1,57 +1,50 @@
-const videos = [
+[
   {
-    titulo: "Bajo vallenato - Sombra perdida",
-    youtubeId: "A4IFhQ5g...",
-    descripcion: "Hoy comparto este hermoso vallenato (Sombra Perdida) en la versión inmortal del Binomio de Oro.",
-    categoria: "Tutoriales"
+    "titulo": "Bajo vallenato - Sombra perdida",
+    "youtubeId": "4uE1rsJqRNc",
+    "descripcion": "Hoy comparto este hermoso vallenato (Sombra Perdida) en la versión inmortal del Binomio de Oro.",
+    "categoria": "Tutoriales"
   },
-
   {
-    titulo: "Como tocar bajo electrico a duo - Classical allegro Joseph Reinagle - duo bass guitar",
-    youtubeId: "mvjPbe...",
-    descripcion: "Versión de dos bajos una oportunidad para seguir estudiando y valorar más este género que tanto nos ha enseñado y aportado para el desarrollo del lenguaje musical.",
-    categoria: "Tutoriales"
+    "titulo": "Como tocar bajo electrico a duo - Classical allegro Joseph Reinagle - duo bass guitar",
+    "youtubeId": "rvmjPbzJWFU",
+    "descripcion": "Versión a dos bajos una oportunidad para seguir estudiando y valorar mas este genero que tanto nos ha enseñado y aportado para el desarrollo del lenguaje musical.",
+    "categoria": "Tutoriales"
   },
-
-  {
-    titulo: "Consejos que todo bajista debería escuchar - Chato Rivas",
-    youtubeId: "Mx7Benv5g7",
-    descripcion: "Esta entrevista hace parte de los procesos formativos de la Escuela de Bajistas de Engativá.",
-    categoria: "Entrevistas"
+{
+    "titulo": "Consejos que todo bajista debería escuchar – Chato Rivas",
+    "youtubeId": "Mwt7BRnvr5Q",
+    "descripcion": "Esta entrevista hace parte de los procesos formativos de la Escuela de Bajistas de Engativá.",
+    "categoria": "Entrevistas"
   },
-
   {
-    titulo: "El Bajo Eléctrico y su influencia en la Música | Javier Jacdd | Escuela de Bajistas de Engativá",
-    youtubeId: "qDpphQMYT",
-    descripcion: "Esta entrevista hace parte de los procesos formativos de la Escuela de Bajistas de Engativá.",
-    categoria: "Entrevistas"
-  },
-
+    "titulo": "El Bajo Eléctrico y su Influencia en la Música | Javier Jacdedt | Escuela de Bajistas de Engativá",
+    "youtubeId": "tDpnQhiDPYI",
+    "descripcion": "Esta entrevista hace parte de los procesos formativos de la Escuela de Bajistas de Engativá.",
+    "categoria": "Entrevistas"
+    },
+    {
+    "titulo": "José Noel Petro | Entrevista Exclusiva | Escuela de Bajistas de Engativá",
+    "youtubeId": "3wNrZvMjIRY",
+    "descripcion": "En esta entrevista exclusiva conversamos con José Noel Petro, reconocido bajista colombiano e hijo del legendario Burro Mocho, una figura histórica en la música popular en Colombia.",
+    "categoria": "Entrevistas"
+    },
   {
-    titulo: "José Noel Petro | Entrevista Exclusiva | Escuela de Bajistas de Engativá",
-    youtubeId: "3dzY6Wj7Y",
-    descripcion: "En esta entrevista exclusiva conversamos con José Noel Petro, reconocido bajista colombiano e hijo del legendario Buro Necho, una figura histórica en la música popular en Colombia.",
-    categoria: "Entrevistas"
-  },
-
+  "titulo": "Fernando Martin explica cómo conocer realmente el bajo eléctrico | Escuela de Bajistas de Engativá",
+    "youtubeId": "quoptGNtEkA",
+    "descripcion": "Fernando Martin, director de la Escuela de Bajistas de Engativá en Bogotá, habla sobre un punto fundamental para todo músico: la importancia de conocer profundamente el instrumento.",
+    "categoria": "Entrevistas"
+    },
   {
-    titulo: "Fernando Martin explica cómo conocer realmente el bajo eléctrico | Escuela de Bajistas de Engativá",
-    youtubeId: "quptENK4",
-    descripcion: "Fernando Martín, director de la Escuela de Bajistas de Engativá en Bogotá, habla sobre un punto fundamental para todo músico: la importancia de conocer profundamente el instrumento.",
-    categoria: "Entrevistas"
-  },
-
+  "titulo": "Javier Pinto,(Pelango)- Bajista de La Mojarra Eléctrica y el Combo efectivo",
+    "youtubeId": "BCA2GTH-PFU",
+    "descripcion": "Javier Pinto (Pelango). Bajista de agrupaciones como La Mojarra Eléctrica y actualmente parte de Combo Efectivo y Jazztropicante, nos comparte su recorrido musical y su conexión profunda con el folclor colombiano.",
+    "categoria": "Entrevistas"
+    },
   {
-    titulo: "Javier Pinto (Bajero Digital de La Mojarra Eléctrica y el Combo Efectivo)",
-    youtubeId: "BG3G2hPF7",
-    descripcion: "Javier Pinto (Bajero), bajista de agrupaciones como La Mojarra Eléctrica y actualmente parte de Combo Efectivo y ZaperocoTinto, nos comparte su recorrido musical y su conexión profunda con el folclor colombiano.",
-    categoria: "Entrevistas"
-  },
-
-  {
-    titulo: "Aprende la escala Mayor o Jónica en el bajo eléctrico paso a paso",
-    youtubeId: "Yw1a_hN0nk",
-    descripcion: "En este tutorial te explico cómo tocar y entender la escala mayor en el bajo eléctrico de una forma fácil y práctica. Si estás empezando y no sabes cómo aprender las notas del bajo, este video te ayudará a comprender la ubicación de las notas y cómo usar la escala jónica correctamente.",
-    categoria: "Tutoriales"
-  }
-];
+  "titulo": "Aprende la escala Mayor o Jónica en el bajo eléctrico paso a paso",
+    "youtubeId": "YviPa_UNoDM",
+    "descripcion": "En este tutorial te explico cómo tocar y entender la escala mayor en el bajo eléctrico de una forma fácil y práctica. Si estás empezando y no sabes cómo aprender las notas del bajo, este video te ayudará a comprender la ubicación de las notas y cómo usar la escala jónica correctamente.",
+    "categoria": "Tutoriales"
+    }
+]
