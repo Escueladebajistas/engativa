@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>20 Ejercicios de Slap para Bajo Eléctrico</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Montserrat', sans-serif;
+      background:#050505;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      background:
+      linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.82)),
+      url('./slap bass clases.png');
+      background-size:cover;
+      background-position:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(120deg,#ffb30025,#000000);
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:5rem;
+      line-height:0.95;
+      font-weight:900;
+      margin-bottom:20px;
+    }
+
+    .yellow{
+      color:#ffbe0b;
+    }
+
+    .hero-text p{
+      font-size:1.2rem;
+      color:#d9d9d9;
+      margin-bottom:30px;
+      line-height:1.6;
+    }
+
+    .features{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+      margin-bottom:35px;
+    }
+
+    .feature{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      font-size:1.1rem;
+      font-weight:700;
+      background:#111;
+      padding:16px 20px;
+      border-radius:14px;
+      border:1px solid #222;
+    }
+
+    .feature-icon{
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      background:#ffbe0b;
+      color:black;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:900;
+      font-size:1.2rem;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#ffbe0b;
+      color:black;
+      padding:18px 40px;
+      border-radius:14px;
+      font-weight:900;
+      font-size:1rem;
+      transition:.3s;
+      box-shadow:0 10px 25px rgba(255,190,11,.35);
+    }
+
+    .btn:hover{
+      transform:translateY(-4px);
+      background:#ffd23f;
+    }
+
+    .hero-image img{
+      width:100%;
+      border-radius:25px;
+      box-shadow:0 20px 60px rgba(0,0,0,.6);
+      border:4px solid #ffbe0b;
+    }
+
+    /* BENEFITS */
+
+    .section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:3rem;
+      font-weight:900;
+      margin-bottom:20px;
+    }
+
+    .section-sub{
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+      color:#cfcfcf;
+      line-height:1.7;
+      margin-bottom:60px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#111;
+      border:1px solid #222;
+      border-radius:24px;
+      padding:35px;
+      transition:.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      border-color:#ffbe0b;
+    }
+
+    .card h3{
+      font-size:1.4rem;
+      margin-bottom:15px;
+      color:#ffbe0b;
+    }
+
+    .card p{
+      color:#cfcfcf;
+      line-height:1.7;
+    }
+
+    /* CONTENT */
+
+    .content-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .content-grid img{
+      width:100%;
+      border-radius:25px;
+      border:3px solid #ffbe0b;
+    }
+
+    .content-list{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .content-item{
+      background:#101010;
+      border-left:5px solid #ffbe0b;
+      padding:18px;
+      border-radius:10px;
+    }
+
+    .content-item strong{
+      color:#ffbe0b;
+    }
+
+    /* CTA */
+
+    .cta{
+      padding:100px 20px;
+      text-align:center;
+      background:
+      linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)),
+      url('./slap bass clases.png');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .cta h2{
+      font-size:3.5rem;
+      margin-bottom:20px;
+      font-weight:900;
+    }
+
+    .cta p{
+      max-width:700px;
+      margin:auto;
+      color:#ddd;
+      line-height:1.7;
+      margin-bottom:35px;
+      font-size:1.1rem;
+    }
+
+    footer{
+      padding:35px 20px;
+      text-align:center;
+      background:#000;
+      color:#888;
+      border-top:1px solid #222;
+    }
+
+    @media(max-width:900px){
+
+      .hero-content,
+      .content-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding:80px 0;
+      }
+
+      .hero-text h1{
+        font-size:3.2rem;
+      }
+
+      .section-title{
+        font-size:2.2rem;
+      }
+
+      .cta h2{
+        font-size:2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="hero-text">
+        <h1>
+          20 Ejercicios de <span class="yellow">SLAP</span><br>
+          para Bajo Eléctrico
+        </h1>
+
+        <p>
+          Mejora tu técnica, groove, precisión y sonido con un método práctico
+          diseñado para bajistas que quieren dominar el Slap desde cero o subir
+          de nivel rápidamente.
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <div class="feature-icon">▶</div>
+            Video clases paso a paso
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">PDF</div>
+            Ejercicios descargables
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🔥</div>
+            Técnica, groove y coordinación
+          </div>
+
+        </div>
+
+        <a href="#comprar" class="btn">
+          QUIERO EL MÉTODO
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <img src="./slap bass clases.png" alt="20 ejercicios de slap">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="section-title">
+        ¿Qué aprenderás?
+      </h2>
+
+      <p class="section-sub">
+        Este método fue creado para ayudarte a desarrollar una técnica sólida
+        de Slap en el bajo eléctrico con ejercicios progresivos y aplicables
+        a grooves reales.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <h3>✔ Técnica de Thumb</h3>
+          <p>
+            Aprende a ejecutar golpes potentes y controlados con el pulgar.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>✔ Pops definidos</h3>
+          <p>
+            Mejora el sonido y la precisión de tus pops en diferentes cuerdas.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>✔ Groove y timing</h3>
+          <p>
+            Desarrolla tu ritmo con ejercicios musicales y dinámicos.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>✔ Coordinación</h3>
+          <p>
+            Incrementa la independencia y control entre ambas manos.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section" style="background:#0b0b0b;">
+    <div class="container content-grid">
+
+      <div>
+        <img src="./slap bass clases.png" alt="Metodo slap">
+      </div>
+
+      <div>
+
+        <h2 class="section-title" style="text-align:left;">
+          Contenido del Método
+        </h2>
+
+        <div class="content-list">
+
+          <div class="content-item">
+            <strong>20 ejercicios progresivos</strong><br>
+            Desde nivel básico hasta intermedio.
+          </div>
+
+          <div class="content-item">
+            <strong>PDF descargable</strong><br>
+            Incluye ejercicios organizados y fáciles de estudiar.
+          </div>
+
+          <div class="content-item">
+            <strong>Video clases HD</strong><br>
+            Explicación detallada de cada ejercicio.
+          </div>
+
+          <div class="content-item">
+            <strong>Aplicación musical</strong><br>
+            Aprende a usar el Slap en grooves reales.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" id="comprar">
+
+    <h2>
+      Lleva tu técnica de Slap al siguiente nivel
+    </h2>
+
+    <p>
+      Empieza hoy mismo a desarrollar velocidad, precisión, groove y musicalidad
+      con este método completo de Slap para Bajo Eléctrico.
+    </p>
+
+    <a href="https://wa.me/573025125222" class="btn">
+      ESCRÍBENOS POR WHATSAPP
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 Escuela de Bajistas de Engativá — Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
