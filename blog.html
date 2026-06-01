@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>El bajo como protagonista</title>
+<title>El bajo como protagonista - Escuela de Bajistas Engativá</title>
 
 <style>
 /* EVENTO PRO NETFLIX */
@@ -44,15 +44,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   border-radius: 16px;
   text-align: left;
   transition: 0.4s;
+  margin-bottom: 30px;
 }
 
 .evento-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+  transform: scale(1.01);
+  box-shadow: 0 10px 40px rgba(242, 169, 0, 0.15);
 }
 
-/* TITULO */
-.evento-card h2 {
+/* CONTAINER DEL BLOG */
+.pitch-container {
+  max-width: 900px;
+  margin: 100px auto 10px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.pitch-grid {
+  display: block;
+}
+
+.pitch-slide-card {
+  background: #141414;
+  border-left: 4px solid #f2a900;
+  padding: 22px;
+  border-radius: 0 16px 16px 0;
+  margin-bottom: 20px;
+}
+
+.pitch-slide-card h3 {
+  color: #f2a900;
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
+.pitch-slide-card p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* TITULOS GENERALES */
+h2 {
   color: #f2a900;
   font-size: 28px;
   margin-bottom: 15px;
@@ -62,14 +96,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .evento-card p {
   color: #ddd;
   line-height: 1.6;
-}
-
-/* INFO */
-.evento-info {
-  margin-top: 20px;
-  background: #1f1f1f;
-  padding: 15px;
-  border-radius: 10px;
 }
 
 /* BOTÓN */
@@ -83,23 +109,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   border-radius: 10px;
   font-weight: bold;
   transition: 0.3s;
+  text-align: center;
 }
 
 .evento-btn:hover {
   transform: scale(1.05);
 }
 
-/* RESERVA */
-.evento-reserva {
-  margin-top: 20px;
-}
-
-/* APOYO */
-.evento-apoyo {
-  margin-top: 25px;
-  font-size: 14px;
-  color: #aaa;
-}
 /* RESET */
 body {
   margin: 0;
@@ -107,10 +123,10 @@ body {
   background: linear-gradient(180deg, #000, #111);
   color: white;
   text-align: center;
-  overflow-x: hidden; /* 🔥 evita desbordes */
+  overflow-x: hidden;
 }
 
-/* 🔥 NAVBAR CORREGIDO */
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -124,7 +140,6 @@ body {
   box-sizing: border-box;
 }
 
-/* LOGO */
 .logo a {
   color: #f2a900;
   font-weight: bold;
@@ -133,7 +148,6 @@ body {
   white-space: nowrap;
 }
 
-/* LINKS */
 .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -156,7 +170,6 @@ body {
   color: #f2a900;
 }
 
-/* BOTÓN MÓVIL */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -170,9 +183,7 @@ body {
   margin: 4px 0;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
-
   .nav-links {
     position: absolute;
     top: 60px;
@@ -193,70 +204,9 @@ body {
   }
 }
 
-/* CONTENIDO */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 100px 20px 40px;
-}
-
-h1 {
-  color: #f2a900;
-  font-size: 30px;
-}
-
-h2 {
-  color: #f2a900;
-  margin-top: 30px;
-}
-
 p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
-}
-
-.card {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 12px;
-  margin-top: 20px;
-  box-shadow: 0 0 20px rgba(255,170,0,0.2);
-}
-
-ul {
-  text-align: left;
-  margin-top: 20px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-/* PRECIO */
-.precio {
-  font-size: 26px;
-  color: #00ff88;
-  font-weight: bold;
-  margin: 20px 0;
-}
-
-/* BOTÓN */
-.boton {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 25px;
-  background: #25D366;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: bold;
-}
-
-/* URGENCIA */
-.urgencia {
-  color: #ff4d4d;
-  margin-top: 10px;
-  font-weight: bold;
 }
 
 /* WHATSAPP */
@@ -270,8 +220,8 @@ li {
   text-decoration: none;
   color: white;
   font-size: 20px;
+  z-index: 1000;
 }
-
 </style>
 </head>
 
@@ -283,7 +233,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   
 <!-- 🔥 NAVBAR -->
 <div class="navbar">
-
   <div class="logo">
     <a href="index.html">Escuela de Bajistas Engativá</a>
   </div>
@@ -301,15 +250,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="videos.html">Videos</a>
     <a href="https://wa.me/573025125222" target="_blank">Contacto</a>
   </div>
-
 </div>
 
+<!-- 📊 ENTRADA DEL BLOG -->
+<section class="pitch-container">
+  <div class="pitch-grid">
+    
+    <!-- Sección 1 -->
+    <div class="pitch-slide-card">
+      <h3>El problema actual: El bajista siempre queda en segundo plano</h3>
+      <p>Cuando quieres estudiar bajo, la mayoría de academias te meten a clases de música general o te asignan a un guitarrista que medio toca bajo o te enseña como el cree que es el bajo. El resultado siempre es el mismo: te estancas tocando sin tecnica y terminas sin entender la verdadera función del bajo, tocando canciones sin entender realmente cómo construir una línea de bajo sólida que mueva a la banda.</p>
+    </div>
 
+    <!-- Sección 2 -->
+    <div class="pitch-slide-card">
+      <h3>La Solución: Escuela de Bajistas de Engativá</h3>
+      <p>Nos cansamos de que el bajo fuera visto como un instrumento secundario y creamos el primer espacio de 
+100% diseñado para nosotros. No somos una academia de música común; somos el epicentro donde transformamos y formamos verdaderos bajistas que toda banda busca desesperadamente: músicos con Groove, peso y personalidad.</p>
+    </div>
 
+    <!-- Sección 3 -->
+    <div class="pitch-slide-card">
+      <h3>Nuestra Metodología son las clases teorico practicas</h3>
+      <p>Estudiamos canciones analizando su forma armonica y ritmica introduciendo teoría sin que se vuelva aburrida. Con nuestro metodo el estudiante aprende a leer partituras aprende lectura en el pentagrama, gramática musical, empieza a entender en qué tonalidad esta parado, y fortalece su audiopercepcion para asi adaptarse a cualquier genero.</p>
+    </div>
+
+    <!-- Sección 4 -->
+    <div class="pitch-slide-card">
+      <h3>Modalidad: Clases individuales, presenciales o virtuales</h3>
+      <p>La escuela de bajista de Engativá cuenta clases presenciales y virtuales adaptandose a las necesidades y posiblidades de cada estudiante.</p>
+    </div>
+        <div class="pitch-slide-card">
+       <h3>Modalidad: Clases grupales</h3>
+      <p>Contamos con un taller grupal los dias sabados a las 3pm. Aqui puedes interactuar y fortalecer tus conocimientos con otros compañeros. </p>
+    </div>
+
+    <!-- Sección 5 -->
+    <div class="pitch-slide-card">
+      <h3>Comunidad: Conectando con el mundo de la música real</h3>
+      <p>Aprender no es solo encerrarse en un salón. En la escuela te conectamos con el mundo real de la música a través de masterclasses colectivas, clínicas de técnica y charlas exclusivas con bajistas referentes de la industria musical nacional. Aprendes de los que están tocando en las tarimas hoy en día.</p>
+    </div>
+
+    <!-- Sección 6 -->
+    <div class="pitch-slide-card">
+      <h3>Tu turno: Inscripciones abiertas con cupos limitados</h3>
+      <p>Para garantizar que cada estudiante reciba atención al 100% y clases individuales de calidad, manejamos cupos estrictamente limitados por temporada. Si estás listo para dejar de tocar siempre lo mismo, dominar el mástil por completo y hacer que tu bajo hable en el escenario, este es tu momento. ¡Escríbenos y asegura tu cupo hoy mismo!</p>
+    </div>
+    
   </div>
-
-</div>
-</div>
+</section>
 
 <!-- 🎬 EVENTO PRO -->
 <section class="evento-pro">
@@ -327,36 +316,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2>¡Haz que el Groove sea tu lenguaje! Clases de Bajo en Bogotá</h2>
 
-    <p> En la Escuela de Bajistas de Engativá, transformamos tu pasión en técnica profesional. No importa si estás empezando desde cero o si buscas perfeccionar tu estilo, este es el espacio donde tus canciones favoritas cobran vida.
+    <p> En la Escuela de Bajistas de Engativá, transformamos tu pasión en técnica profesional. No importa si estás empezando desde cero o si buscas perfeccionar tu estilo, este es el espacio donde tus canciones favoritas cobran vida.</p>
  
     <p>🚀 ¿Qué vas a dominar con nosotros?</p>
- <p>Nuestro programa está diseñado para darte una formación integral, equilibrando la habilidad física con el conocimiento teórico: </p>
- <p>•	Técnicas Modernas: Domina el Slap, la velocidad, Tapping y el control del Fingerstyle. </p>
- <p>•	Lectura y Teoría: Aprende lectura de pentagrama desde la primera clase y comprende la gramática musical para hablar el lenguaje de la música de manera fluida.</p>
- <p>•	Creatividad: Desarrolla tu oído y capacidad de improvisación, aprende escalas y comienza a crear líneas de bajo eléctrico únicas en cualquier género.</p>
- <p>•	Comprenderás la tonalidad en la que estas tocando</p>
- <p>•	Repertorio Personalizado: ¡Tú eliges la música! Sacamos las canciones que siempre has querido tocar.</p>
-    
- <p>📍 Elige como tomar las clases: Presencial o Virtual </p>
- <p>Disfruta de la experiencia completa en nuestras instalaciones o aprende desde la comodidad de tu casa con clases online. 
-   ¡Tú pones el ritmo, nosotros la técnica! </p>
+    <p>Nuestro programa está diseñado para darte una formación integral, equilibrando la habilidad física con el conocimiento teórico: </p>
+    <p>• Técnicas Modernas: Domina el Slap, la velocidad, Tapping y el control del Fingerstyle. </p>
+    <p>• Lectura y Teoría: Aprende lectura de pentagrama desde la primera clase y comprende la gramática musical para hablar el lenguaje de la música de manera fluida.</p>
+    <p>• Creatividad: Desarrolla tu oído y capacidad de improvisación, aprende escalas y comienza a crear líneas de bajo eléctrico uniques en cualquier género.</p>
+    <p>• Comprenderás la tonalidad en la que estas tocando</p>
+    <p>• Repertorio Personalizado: ¡Tú eliges la música! Sacamos las canciones que siempre has querido tocar.</p>
+      
+    <p>📍 Elige como tomar las clases: Presencial o Virtual </p>
+    <p>Disfruta de la experiencia completa en nuestras instalaciones o aprende desde la comodidad de tu casa con clases online. 
+       ¡Tú pones el ritmo, nosotros la técnica! </p>
 
-   <H2>🔥¡INSCRIPCIONES ABIERTAS!</H2> 
- <p>No dejes pasar más tiempo. Ven y conócenos en nuestra sede:
- <p>📍 Dirección: Calle 70a #90b - 43  </p>
- <p>Lugar: Escuela de Bajistas de Engativá, Bogotá.</p>
-    
-<p>¡Escríbenos ahora y asegura tu cupo para empezar a tocar como un profesional! </p>
-    </div>
+    <h2>🔥¡INSCRIPCIONES ABIERTAS!</h2> 
+    <p>No dejes pasar más tiempo. Ven y conócenos en nuestra sede:</p>
+    <p>📍 Dirección: Calle 70a #90b - 43 </p>
+    <p>Lugar: Escuela de Bajistas de Engativá, Bogotá.</p>
+      
+    <p>¡Escríbenos ahora y asegura tu cupo para empezar a tocar como un profesional! </p>
+  </div>
 
-          <H2>CUPOS LIMITADOS</H2>
+  <h2>CUPOS LIMITADOS</h2>
 
-      <a href="https://wa.me/573025125222" target="_blank" class="evento-btn">
-        📲 ESCRÍBENOS POR WHATSAPP
-      </a>
-    </div>
-
-     </div>
+  <a href="https://wa.me/573025125222" target="_blank" class="evento-btn">
+    📲 ESCRÍBENOS POR WHATSAPP
+  </a>
 
 </section>
 
